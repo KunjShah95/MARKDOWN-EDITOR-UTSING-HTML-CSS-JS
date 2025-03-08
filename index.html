@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown Editor</title>
+    <meta name="description" content="Simple Markdown Editor with Live Preview" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <!-- Marked for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Markdown Editor</h1>
+      </header>
+      
+      <div class="editor-container">
+        <div class="panel-group">
+          <div class="panel editor-panel">
+            <div class="editor-wrapper">
+              <div class="line-numbers"></div>
+              <textarea id="markdown-editor" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"># Welcome to the Markdown Editor
+
+## Features
+
+- **Live Preview:** See your changes as you type
+- **Syntax Highlighting:** Makes your code look beautiful
+- **Split View:** Edit and preview side by side
+- **GitHub Flavored Markdown:** Supports tables, task lists, and more
+
+## Example Code
+
+```javascript
+function greeting(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greeting('world'));
+```
+
+## Tables
+
+| Feature | Description |
+|---------|-------------|
+| Split View | Edit and preview side by side |
+| Syntax Highlighting | Makes your code beautiful |
+| Live Preview | See your changes as you type |
+
+## Task Lists
+
+- [x] Create markdown editor
+- [x] Add syntax highlighting
+- [x] Implement live preview
+- [ ] Add more features
+
+> This is a blockquote. You can use these to emphasize important information or quotes.</textarea>
+            </div>
+          </div>
+          <div class="resizer" id="dragMe"></div>
+          <div class="panel preview-panel">
+            <div id="markdown-preview" class="markdown-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
